@@ -2,7 +2,7 @@ import z from "zod";
 export declare const signupInput: z.ZodObject<{
     username: z.ZodString;
     password: z.ZodString;
-    name: () => z.ZodOptional<z.ZodString>;
+    name: z.ZodOptional<z.ZodString>;
 }, z.core.$strip>;
 export declare const signinInput: z.ZodObject<{
     username: z.ZodString;
@@ -20,4 +20,5 @@ export declare const updateBlogInput: z.ZodObject<{
 export type SignupInput = z.infer<typeof signupInput>;
 export type SigninInput = z.infer<typeof signinInput>;
 export type CreateBlogInput = z.infer<typeof createBlogInput>;
+export type BlogType = z.infer<typeof createBlogInput>;
 export type UpdateBlogInput = z.infer<typeof updateBlogInput>;
